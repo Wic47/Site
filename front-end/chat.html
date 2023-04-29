@@ -1,104 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Budget-GPT</title>
-    <link rel="stylesheet" href="style.css"></link>
-    <script src="https://kit.fontawesome.com/de99695a1a.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins">
-
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="bilder/open-ai-removebg-preview.png"
+    />
+    <script
+      src="https://kit.fontawesome.com/de99695a1a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins"
+    />
+  </head>
+  <body>
     <header>
-        <img id="logga" src="bilder/open-ai-removebg-preview.png" alt="logga">
-        <nav>
-            <li><a href="sida2.html"></a>hej</li>
-            <li><a href="sida2.html"></a>hej</li>
-            <li><a href="sida2.html"></a>hej</li>
-        </nav>
+      <img id="logga" src="bilder/open-ai-removebg-preview.png" alt="logga" />
+      <nav>
+        <ul>
+          <li><a href="sida2.html"></a>hej</li>
+          <li><a href="sida2.html"></a>hej</li>
+          <li><a href="sida2.html"></a>hej</li>
+        </ul>
+      </nav>
     </header>
     <div class="container">
-        <aside>
-            <div class="amogus">
-                <div class="history">
-                    <h2>History</h2>
-                    <i id="collapse" class="fa-solid fa-chevron-left"></i>
-                </div>
-                <div class="new">
-                    <i class="fa-solid fa-plus"></i>
-                    <h4>New Chat</h4>
-                </div>
-            </div>
-            <div class="settings-container">
-                <div  id="upgrade" class="setting">
-                    <i class="fa-solid fa-arrow-up"></i>
-                    Upgrade
-                </div>
-                <div id="modes" class="setting">
-                    <i class="fa-solid fa-sun"></i>
-                    Light mode
-                </div>
-                <div class="setting">
-                    <i class="fa-solid fa-right-from-bracket"></i>
-                    Sign out
-                </div>
-            </div>
-            <div class="account-container">
-                <div class="account">
-                    <img id="profil" src="bilder/open-ai.png" alt="Profilbild">
-                    <div>
-                        <h4>Namn</h4>
-                        <h5>text</h5>
-                    </div>
-                </div>
-            </div>
-        </aside>
-        <div class="aside2">
-            <div class="collapse2-container">
-                <i id="collapse2" class="fa-solid fa-chevron-right"></i>
-            </div>
+      <aside>
+        <div class="amogus">
+          <div class="history">
+            <h2>History</h2>
+            <i id="collapse" class="fa-solid fa-chevron-left"></i>
+          </div>
+          <div class="new">
+            <i class="fa-solid fa-plus"></i>
+            <h4>New Chat</h4>
+          </div>
         </div>
-        <div class="main-container">
-            <div class="container-container">
-                <h1>Chad GPT</h1>
-                <div class="icons">
-                    <div>
-                        <i class="fa-solid fa-sun fa-3x"></i>
-                        <h2>Examples</h2>
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-bolt fa-3x"></i>
-                        <h2>Capabilities</h2>
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-triangle-exclamation fa-3x"></i>
-                        <h2>Limitations</h2>
-                    </div>
-                </div>
-                <div class="info-container">
-                    <div class="info example">"Explain quantum computing in simple terms" →</div>
-                    <div class="info ">Remembers what user said earlier in the conversation</div>
-                    <div class="info ">May occasionally generate incorrect information</div>
-                    <div class="info example">"Got any creative ideas for a 10 year old's birthday?" →</div>
-                    <div class="info">Allows user to provide follow-up corrections</div>
-                    <div class="info">May occasionally produce harmful instructions or biased content</div>
-                    <div class="info example">"How do I make an HTTP request in Javascript?" →</div>
-                    <div class="info">Trained to decline inappropriate requests</div>
-                    <div class="info">Limited knowledge of world and events after 2021</div>
-                </div>
-            </div>
-            <div class="text-container"></div>
-            <form class="chat-container">
-                <input type="text" id="chat" placeholder="send a message..." spellcheck="false" required="true" autofocus="true" title="" autocomplete="off"></input>
-                <button type="submit" id="send"><i class="fa-regular fa-paper-plane fa-flip-horizontal"></i></button>
-            </form>
+        <div class="settings-container">
+          <div id="upgrade" class="setting">
+            <i class="fa-solid fa-arrow-up"></i>
+            Upgrade
+          </div>
+          <div id="modes" class="setting">
+            <i class="fa-solid fa-sun"></i>
+            Light mode
+          </div>
+          <div class="setting">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Sign out
+          </div>
         </div>
+        <div class="account-container">
+          <div class="account">
+            <img id="profil" src="bilder/open-ai.png" alt="Profilbild" />
+            <div>
+              <h4>Namn</h4>
+              <h5>text</h5>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <div class="aside2">
+        <div class="collapse2-container">
+          <i id="collapse2" class="fa-solid fa-chevron-right"></i>
+        </div>
+      </div>
+      <div class="main-container">
+        <div class="container-container">
+          <h1>Chad GPT</h1>
+          <div class="icons">
+            <div>
+              <i class="fa-solid fa-sun fa-3x"></i>
+              <h2>Examples</h2>
+            </div>
+            <div>
+              <i class="fa-solid fa-bolt fa-3x"></i>
+              <h2>Capabilities</h2>
+            </div>
+            <div>
+              <i class="fa-solid fa-triangle-exclamation fa-3x"></i>
+              <h2>Limitations</h2>
+            </div>
+          </div>
+          <div class="info-container">
+            <div class="info example">
+              "Explain quantum computing in simple terms" →
+            </div>
+            <div class="info">
+              Remembers what user said earlier in the conversation
+            </div>
+            <div class="info">
+              May occasionally generate incorrect information
+            </div>
+            <div class="info example">
+              "Got any creative ideas for a 10 year old's birthday?" →
+            </div>
+            <div class="info">Allows user to provide follow-up corrections</div>
+            <div class="info">
+              May occasionally produce harmful instructions or biased content
+            </div>
+            <div class="info example">
+              "How do I make an HTTP request in Javascript?" →
+            </div>
+            <div class="info">Trained to decline inappropriate requests</div>
+            <div class="info">
+              Limited knowledge of world and events after 2021
+            </div>
+          </div>
+        </div>
+        <div class="text-container"></div>
+        <form class="chat-container">
+          <input
+            type="text"
+            id="chat"
+            placeholder="send a message..."
+            spellcheck="false"
+            required="required"
+            autofocus="autofocus"
+            title=""
+            autocomplete="off"
+          />
+          <button type="submit" id="send">
+            <i class="fa-regular fa-paper-plane fa-flip-horizontal"></i>
+          </button>
+        </form>
+      </div>
     </div>
-    <div id="purchase"></div>
+    <div id="purchase">
+      <div class="purchase-section">
+        <h3>hej</h3>
+      </div>
+      <div class="purchase-section"><h3>hej</h3></div>
+    </div>
     <script src="funktioner.js"></script>
     <script src="chat.js"></script>
-</body>
+  </body>
 </html>
- 

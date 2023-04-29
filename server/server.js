@@ -20,21 +20,24 @@ const openai = new OpenAIApi(configuration);
 app.post('/', async (req,res) => {
 
     const { messages } = req.body;
+    try {   
+        const completion = await openai.createChatCompletion({
+            model: "gpt-3.5-turbo",
+            messages: [
+                {role: "system", content: `You are Chat GPT a helpful assistant designed to help with anything.`},
+                ...messages
+            ],
+            temperature: 0.4,
+            max_tokens: 2048,
+            frequency_penalty: 0.5,
+            });
 
-    const completion = await openai.createChatCompletion({
-        model: "gpt-3.5-turbo",
-        messages: [
-            {role: "system", content: `You are Chat GPT a helpful assistant designed to help with anything.`},
-            ...messages
-        ],
-        temperature: 0.4,
-        max_tokens: 2048,
-        frequency_penalty: 0.5,
-        });
-
-    res.json({
-        completion: completion.data.choices[0].message
-    })
+        res.json({
+            completion: completion.data.choices[0].message
+        })
+    } catch (error) {
+        alert(error)
+    }
 })
 
 app.listen(port, () => console.log(`Servern körs nu på port http://localhost:${port}`));

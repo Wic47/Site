@@ -4,6 +4,7 @@ const form = document.querySelector("form");
 const start = document.querySelector(".container-container");
 const textruta = document.querySelector(".text");
 const container = document.querySelector(".text-container"); 
+const newChat = document.querySelector(".new")
 function delayedTyping(s) {;
     let i = 0;
     let time = 50;
@@ -34,6 +35,11 @@ function toggleChat() {
     button.toggleAttribute("disabled");
 }
 
+newChat.addEventListener("click", (e) => {
+    let messages = []
+    messages.length = 0
+    console.log(messages)
+})
 
 let messages = []
 form.addEventListener("submit", function(e) {

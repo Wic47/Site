@@ -53,6 +53,7 @@ modes.addEventListener("click", function() {
         r.style.setProperty("--color","black");
         r.style.setProperty("--chat-color","#141414");
         r.style.setProperty("--chat-hover","#858585");
+        r.style.setProperty("--text","#dee2e6")
         modes.innerHTML = `<i id="mode" class="fa-solid fa-moon"></i> Dark mode`;
     }
     else {
@@ -68,6 +69,7 @@ modes.addEventListener("click", function() {
         r.style.setProperty("--color","white");
         r.style.setProperty("--chat-color","#D2D6DB");
         r.style.setProperty("--chat-hover","#1234");
+        r.style.setProperty("--text", "#3123")
         modes.innerHTML = `<i id="mode" class="fa-solid fa-sun"></i> Light mode`;
     }; 
 });
