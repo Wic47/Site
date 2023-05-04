@@ -442,6 +442,9 @@ p {
   display: none;
 }
 
+.regular {
+  display: flex;
+}
 @media only screen and (max-width: 768px) {
   .settings-container {
     gap: 0.5vw;
@@ -477,12 +480,11 @@ p {
   }
 
   .chat-container {
-    margin-bottom: 2vh;
-    height: fit-content;
-    width: 50vw;
+    margin-bottom: 0.6vh;
+    width: 51vw;
     transform: scale(2);
-    height: 5vh;
-    background-color: #112233;
+    height: 6vh;
+    background-color: #23272F;
   }
 
   .main-container {
@@ -554,5 +556,9 @@ p {
   .info {
     width: 90vw;
     margin: 0;
+  }
+
+  #user {
+    width: 10vw;
   }
 }

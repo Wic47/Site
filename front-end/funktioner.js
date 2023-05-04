@@ -2,8 +2,7 @@ let collapse = document.getElementById("collapse");
 let aside = document.querySelector("aside");
 let aside2 = document.querySelector(".aside2");
 let svar = document.getElementById("chat");
-let ny = document.querySelector(".new");
-let info = document.querySelector(".container-container");
+let info = document.querySelectorAll(".container-container");
 let ex = document.getElementsByClassName("example");
 let modes = document.getElementById("modes");
 let r = document.querySelector(":root");
@@ -22,11 +21,6 @@ collapse.addEventListener("click", function() {
 collapse2.addEventListener("click", function() {
     aside.style.display = "flex";
     aside2.style.display = "none";
-})
-ny.addEventListener("click", function() {
-    info.style.display = "flex";
-    svar.value = "";
-    textc.innerHTML = "";
 })
 upgrade.addEventListener("click", function() {
     if (purchase.style.display === "flex") {
