@@ -31,6 +31,11 @@ body {
   height: fit-content;
 }
 
+.center {
+  align-items: center;
+  justify-content: center;
+}
+
 header {
   display: flex;
   width: 100vw;
@@ -121,7 +126,7 @@ aside {
 #profil {
   width: 40%;
   height: auto;
-  border-radius: 3vw;
+  border-radius: 50%;
   margin-right: 0.5vw;
 }
 
@@ -224,7 +229,7 @@ h5 {
   align-items: center;
 }
 
-.container {
+main {
   display: flex;
 }
 
@@ -232,8 +237,6 @@ h5 {
   display: flex;
   width: 90vw;
   height: 93vh;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 
@@ -255,8 +258,6 @@ h5 {
   background-color: var(--info);
   border-radius: 1vw;
   padding: 0.1vw;
-  justify-content: center;
-  align-items: center;
   font-size: 0.75vw;
   text-align: center;
   transition: 0.4s;
@@ -367,8 +368,6 @@ h2 {
 .purchase-section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: inherit;
   width: 50%;
 }
@@ -416,7 +415,7 @@ p {
   display: flex;
   width: inherit;
   height: fit-content;
-  word-break: break-all;
+  overflow-wrap: break-word;
 }
 
 ::-webkit-scrollbar {
@@ -476,15 +475,19 @@ p {
   }
 
   aside {
-    display: none;
+    display: none !important;
+  }
+
+  .aside2 {
+    display: none !important;
   }
 
   .chat-container {
-    margin-bottom: 0.6vh;
     width: 51vw;
     transform: scale(2);
-    height: 6vh;
-    background-color: #23272F;
+    background-color: #23272f;
+    margin-bottom: 1.5vh;
+    height: 5vh;
   }
 
   .main-container {
@@ -524,12 +527,9 @@ p {
   .container-container {
     flex-wrap: nowrap;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     overflow-y: auto;
     width: inherit;
     padding: 0;
-    min-height: 0;
   }
 
   .main-container {
@@ -561,4 +561,60 @@ p {
   #user {
     width: 10vw;
   }
+
+  .borgir-container {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 108098421084210842108;
+  }
+
+  .borgir {
+    display: flex;
+    width: 75vw;
+    flex-direction: column;
+    background-color: var(--aside);
+  }
+
+  .close {
+    display: flex;
+    width: 15vw;
+    height: 7.5vh;
+    background-color: var(--aside);
+    opacity: 0.7;
+    border: 2px solid black;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+.slide-in {
+  animation-name: slide-in;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
+
+.slide-out {
+  animation-name: slide-out;
+  animation-duration: 1s;
+  animation-timing-function: linear;
 }

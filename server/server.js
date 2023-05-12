@@ -36,7 +36,7 @@ app.post('/', async (req,res) => {
             completion: completion.data.choices[0].message
         })
     } catch (error) {
-        alert(error)
+        console.log(error)
     }
 })
 
