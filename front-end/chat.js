@@ -8,10 +8,11 @@ const newChat = document.querySelector(".new");
 const newChat2 = document.getElementById("new-phone");
 function delayedTyping(s) {
   let i = 0;
-  let time = 50;
+  let time = 35;
+  let text = document.querySelectorAll(".response");
   let interval = setInterval(() => {
     const char = s[i];
-    textruta.innerHTML += char;
+    text[text.length - 1].innerHTML += char;
     i++;
     if (i >= s.length) {
       clearInterval(interval);
@@ -67,7 +68,7 @@ form.addEventListener("submit", function (e) {
     "beforeend",
     `<div class="text">
     <img class="user" src="bilder/User_Icon.png" alt="profilbild">
-    <p>${chat.value}</p>
+    <p class="response">${chat.value}</p>
     </div>`
   );
   const newMessage = { role: "user", content: `${chat.value}` };
@@ -89,16 +90,17 @@ form.addEventListener("submit", function (e) {
         role: "assistant",
         content: `${data.completion.content}`,
       };
-      console.log(data.completion.content);
       messages.push(newResponse);
       chat.value = "";
       container.insertAdjacentHTML(
         "beforeend",
         `<div class="text">
         <img class="user" src="bilder/open-ai.png" alt="profilbild">
-        <p>${data.completion.content}</p>
+        <p class="response"></p>
         </div>`
       );
+      console.log(data.completion.content);
+      delayedTyping(data.completion.content);
       toggleChat();
     });
 });

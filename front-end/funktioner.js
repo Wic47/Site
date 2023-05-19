@@ -8,13 +8,14 @@ const modes = document.querySelectorAll(".modes");
 const r = document.querySelector(":root");
 const textc = document.querySelector(".text-container");
 const closemenu = document.querySelector(".close");
-const burgercontainer = document.querySelector(".borgir-container");
+const burgercontainer = document.querySelector(".burger-container");
 const burgermenu = document.getElementById("burger");
 const slide_animation = document.querySelector(".slide-animation");
 const fade_animation = document.querySelector(".fade-animation");
 const blur = document.querySelector(".blur");
 const user = document.querySelectorAll(".username");
 const signout = document.querySelectorAll(".signout");
+const logo = document.getElementById("logo");
 
 user.forEach((e) => {
   e.innerHTML = localStorage.getItem("username");
@@ -77,6 +78,8 @@ modes.forEach((e) => {
       r.style.setProperty("--chat-color", "#141414");
       r.style.setProperty("--chat-hover", "#858585");
       r.style.setProperty("--text", "#dee2e6");
+      r.style.setProperty("--header", "#DCDFE5");
+      logo.style.filter = "invert(1)";
       modes.innerHTML = `<i id="mode" class="fa-solid fa-moon"></i> Dark mode`;
     } else {
       r.style.setProperty("--bg", "#434C5E");
@@ -92,6 +95,8 @@ modes.forEach((e) => {
       r.style.setProperty("--chat-color", "#D2D6DB");
       r.style.setProperty("--chat-hover", "#1234");
       r.style.setProperty("--text", "#3123");
+      r.style.setProperty("--header", "#333B47");
+      logo.style.filter = "initial";
       modes.innerHTML = `<i id="mode" class="fa-solid fa-sun"></i> Light mode`;
     }
   });

@@ -22,6 +22,7 @@
   --chat-hover: #1234;
   --input: #2b313b;
   --text: #3123;
+  --header: #333b47;
 }
 
 body {
@@ -41,19 +42,19 @@ header {
   display: flex;
   width: 100vw;
   height: 5vh;
-  background-color: #1a1d23;
+  background-color: var(--header);
   align-items: center;
   justify-content: flex-end;
   border-bottom: 1px solid black;
 }
 
-#logga {
+#logo {
   width: 2vw;
   height: auto;
   transition: 0.3s;
 }
 
-#logga:hover {
+#logo:hover {
   transition: 0.3s;
   transform: scale(1.2);
   cursor: pointer;
@@ -152,7 +153,7 @@ h4 {
   cursor: pointer;
 }
 
-.amogus {
+.padding {
   padding: 0 5%;
 }
 
@@ -537,7 +538,7 @@ a {
     background-color: var(--account);
   }
 
-  #logga,
+  #logo,
   header > nav {
     display: none;
   }
@@ -652,7 +653,7 @@ a {
     width: 10vw;
   }
 
-  .borgir-container {
+  .burger-container {
     display: none;
     position: absolute;
     left: 0;
@@ -662,7 +663,7 @@ a {
     z-index: 108098421084210842108;
   }
 
-  .borgir {
+  .burger {
     display: flex;
     width: 75vw;
     flex-direction: column;
