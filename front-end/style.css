@@ -20,7 +20,7 @@
   --color: white;
   --chat-color: #d2d6db;
   --chat-hover: #1234;
-  --purchase: #2b313b;
+  --input: #2b313b;
   --text: #3123;
 }
 
@@ -32,6 +32,7 @@ body {
 }
 
 .center {
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -39,7 +40,7 @@ body {
 header {
   display: flex;
   width: 100vw;
-  height: 4vh;
+  height: 5vh;
   background-color: #1a1d23;
   align-items: center;
   justify-content: flex-end;
@@ -49,7 +50,6 @@ header {
 #logga {
   width: 2vw;
   height: auto;
-  margin-right: auto;
   transition: 0.3s;
 }
 
@@ -57,6 +57,10 @@ header {
   transition: 0.3s;
   transform: scale(1.2);
   cursor: pointer;
+}
+
+.align-right {
+  margin-right: auto;
 }
 
 li {
@@ -114,14 +118,14 @@ aside {
 .account-container {
   display: flex;
   width: 100%;
-  height: fit-content;
+  height: 11vh;
   border-top: 1px solid black;
   background-color: var(--account);
   align-items: center;
   margin-top: auto;
 }
 
-#profil {
+.profil {
   width: 35%;
   height: auto;
   border-radius: 50%;
@@ -139,10 +143,7 @@ aside {
 
 h4 {
   font-size: 0.8vw;
-}
-
-h5 {
-  font-size: 0.6vw;
+  text-overflow: ellipsis;
 }
 
 .account:hover {
@@ -401,7 +402,7 @@ button {
   background-color: var(--text);
 }
 
-#user {
+.user {
   width: 2.5vw;
   height: auto;
   border-radius: 20%;
@@ -442,6 +443,87 @@ p {
 .regular {
   display: flex;
 }
+
+/* start sida */
+
+.hero {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: #151414;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#hero-gif {
+  display: flex;
+  width: 100vw;
+  height: auto;
+  align-self: flex-end;
+}
+
+.hero-button {
+  display: flex;
+  width: 20vw;
+  height: 10vh;
+  background-color: var(--account);
+  position: absolute;
+  margin-bottom: 2.5%;
+  border: 1px solid gray;
+  transition: 0.3s;
+}
+
+.hero-button:hover {
+  background-color: var(--account-hover);
+  transition: 0.3s;
+}
+
+a {
+  text-decoration: none;
+}
+
+.start-text {
+  display: flex;
+  position: absolute;
+  font-size: 2vw;
+  align-self: center;
+  width: 30vw;
+  text-align: center;
+  word-break: break-word;
+}
+
+/* login sida */
+
+.login-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+#login {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+.inputs {
+  padding: 0.5vw;
+  background-color: var(--input);
+  border: none;
+  outline: none;
+}
+
+.login-submit {
+  width: 5vw;
+  height: 5vh;
+  background-color: var(--input);
+  align-self: center;
+  border-radius: 10%;
+}
+
+.login-submit:hover {
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 768px) {
   .settings-container {
     gap: 0.5vw;
@@ -536,7 +618,8 @@ p {
 
   .settings-container {
     height: fit-content;
-    margin-top: 200%;
+    margin-top: auto;
+    height: 84vh;
   }
 
   .main-container {
@@ -565,7 +648,7 @@ p {
     margin: 0;
   }
 
-  #user {
+  .user {
     width: 10vw;
   }
 
@@ -605,7 +688,7 @@ p {
     z-index: 1;
   }
 
-  #profil {
+  .profil {
     width: 20%;
   }
 
@@ -639,12 +722,43 @@ p {
     justify-content: center;
     font-size: 5vw;
     width: 100%;
+    height: 5vh;
+    align-items: center;
   }
 
   li:hover {
     transform: initial;
     background-color: var(--hover);
     opacity: 1;
+  }
+
+  #hero-gif {
+    height: 100vh;
+  }
+
+  .hero-button {
+    margin-bottom: 100%;
+    width: 20vw;
+    height: 20vw;
+  }
+
+  .start-text {
+    font-size: 5vw;
+    width: 75vw;
+    align-self: flex-start;
+  }
+
+  .inputs {
+    width: 40vw;
+    height: 3vh;
+  }
+
+  .inputs::placeholder {
+    font-size: 3vw;
+  }
+
+  .login-submit {
+    width: fit-content;
   }
 }
 

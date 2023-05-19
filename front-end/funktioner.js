@@ -6,8 +6,6 @@ const info = document.querySelectorAll(".container-container");
 const ex = document.getElementsByClassName("example");
 const modes = document.querySelectorAll(".modes");
 const r = document.querySelector(":root");
-const purchase = document.getElementById("purchase");
-const upgrade = document.querySelectorAll(".upgrade");
 const textc = document.querySelector(".text-container");
 const closemenu = document.querySelector(".close");
 const burgercontainer = document.querySelector(".borgir-container");
@@ -15,6 +13,19 @@ const burgermenu = document.getElementById("burger");
 const slide_animation = document.querySelector(".slide-animation");
 const fade_animation = document.querySelector(".fade-animation");
 const blur = document.querySelector(".blur");
+const user = document.querySelectorAll(".username");
+const signout = document.querySelectorAll(".signout");
+
+user.forEach((e) => {
+  e.innerHTML = localStorage.getItem("username");
+});
+
+signout.forEach((e) => {
+  e.addEventListener("click", () => {
+    localStorage.clear();
+    window.location.href = "start.html";
+  });
+});
 
 for (let i = 0; i < ex.length; i++) {
   ex[i].addEventListener("click", function () {
@@ -28,15 +39,6 @@ collapse.addEventListener("click", function () {
 collapse2.addEventListener("click", function () {
   aside.style.display = "flex";
   aside2.style.display = "none";
-});
-upgrade.forEach((e) => {
-  e.addEventListener("click", function () {
-    if (purchase.style.display === "flex") {
-      purchase.style.display = "none";
-    } else {
-      purchase.style.display = "flex";
-    }
-  });
 });
 closemenu.addEventListener("click", function () {
   slide_animation.style.setProperty("animation-name", "slide-out");

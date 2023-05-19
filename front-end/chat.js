@@ -66,7 +66,7 @@ form.addEventListener("submit", function (e) {
   container.insertAdjacentHTML(
     "beforeend",
     `<div class="text">
-    <img id="user" src="bilder/User_Icon.png" alt="profilbild">
+    <img class="user" src="bilder/User_Icon.png" alt="profilbild">
     <p>${chat.value}</p>
     </div>`
   );
@@ -95,7 +95,7 @@ form.addEventListener("submit", function (e) {
       container.insertAdjacentHTML(
         "beforeend",
         `<div class="text">
-        <img id="user" src="bilder/open-ai.png" alt="profilbild">
+        <img class="user" src="bilder/open-ai.png" alt="profilbild">
         <p>${data.completion.content}</p>
         </div>`
       );
